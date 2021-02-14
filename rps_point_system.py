@@ -14,45 +14,37 @@ If you end up meeting this goal, then you win! If not, then you can always retry
 def game(score):
     count = 0
     while count < 10:
-        choices = ['rock', 'paper', 'scissors']
+        choices = ["rock", "paper", "scissors"]
         user_choice = input("Rock, Paper, or Scissors?: ").lower()
         bot_choice = random.choice(choices)
-        print(bot_choice)
 
         if user_choice == bot_choice:
             print("Tie! Onto the next round! \n")
             count += 1
-
         elif user_choice == "rock" and bot_choice == "scissors":
             print("The bot has chosen scissors! You win! \n")
             score += 1 
             count += 1
-
         elif user_choice == "scissors" and bot_choice == "rock":
             print("The bot has chosen rock! You lose! :( \n")
             score -= 1
             count += 1
-
         elif user_choice == "paper" and bot_choice == "rock":
             print("The bot has chosen rock! You win! \n")
             score += 1
             count += 1
-
         elif user_choice == "rock" and bot_choice == "paper":
             print("The bot has chosen paper! You lose! :( \n")
             score -= 1
             count += 1
-
         elif user_choice == "scissors" and bot_choice == "paper":
             print("The bot has chosen paper! You win! \n")
             score += 1
             count += 1
-
         elif user_choice == "paper" and bot_choice == "scissors":
             print("The bot has chosen scissors! You lose! :( \n")
             score -= 1
             count += 1
-
         else: 
             print("You have not chosen rock, paper, or scissors, please retry. \n")
 
@@ -62,6 +54,7 @@ def game(score):
 def ending(score):
     print(f"""\nYou have reached the end!
 Your total points: {score} points.""")
+
     if score >= 15:
         print("Congrats! You have successfully earned 15 points! You win!!! :) \n")
     else:
